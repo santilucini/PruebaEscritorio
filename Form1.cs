@@ -37,8 +37,10 @@ namespace PruebaDeEscritorio
             SqlConnection cn = new SqlConnection("Data Source=LAPTOP-C4043JNM;Initial Catalog=PruebaEscritorio;Integrated Security=True");
             cn.Open();
             SqlDataAdapter adaptador = new SqlDataAdapter("select * from Usuarios where codigo=" + txbCodigoActualizar.Text + "",cn);
-            DataTable t = new DataTable();
-            adaptador.Fill(t);             
+            DataSet t = new DataSet();
+            adaptador.Fill(t);  
+            
+            
         }
     }
 }
